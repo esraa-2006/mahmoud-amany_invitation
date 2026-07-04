@@ -1,22 +1,323 @@
+اسم الملف الصحيح: `index.html`
+
+انسخي الكود ده كاملًا في الملف، وبعدها احفظيه أو ارفعيه على GitHub بالاسم ده بالضبط:
+
+```html
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>دعوة زفاف - محمود و أماني</title>
+
 <style>
-  :root { --rose-deep:#9c3a52;--rose-mid:#c96a82;--rose-soft:#f3d9de;--blush:#fdf3f4;--cream:#fffaf8;--gold:#b98a4f;--ink:#4a2530; }
-  *{margin:0;padding:0;box-sizing:border-box} body{background:linear-gradient(180deg,var(--blush),var(--cream));font-family:Tahoma,Arial,sans-serif;color:var(--ink);overflow-x:hidden}
-  .container{max-width:560px;margin:0 auto;padding:0 24px 60px;position:relative}.corner{position:fixed;width:130px;height:130px;opacity:.55;pointer-events:none;z-index:0}.corner.tl{top:0;right:0}.corner.br{bottom:0;left:0;transform:rotate(180deg)}
-  .hero{position:relative;text-align:center;padding:70px 20px 40px;z-index:1}.eyebrow{font-size:13px;letter-spacing:4px;color:var(--gold);font-weight:500;margin-bottom:18px;opacity:0;animation:fadeUp 1s ease forwards .2s}.names{font-family:"Times New Roman",serif;font-size:56px;line-height:1.3;color:var(--rose-deep);font-weight:700;opacity:0;animation:fadeUp 1s ease forwards .5s}.amp{display:block;font-size:30px;color:var(--gold);margin:6px 0}.tagline{margin-top:22px;font-size:16px;font-weight:300;line-height:2;opacity:0;animation:fadeUp 1s ease forwards .9s}@keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
-  .divider{display:flex;align-items:center;justify-content:center;gap:12px;margin:36px 0}.divider .line{width:60px;height:1px;background:var(--rose-mid)}.divider .dot{width:6px;height:6px;border-radius:50%;background:var(--gold)}
-  .card{background:var(--cream);border:1px solid var(--rose-soft);border-radius:18px;padding:34px 28px;text-align:center;box-shadow:0 20px 40px -20px rgba(156,58,82,.25);position:relative;z-index:1}.card+.card{margin-top:20px}.label{font-size:12px;letter-spacing:3px;color:var(--gold);margin-bottom:10px}.value{font-family:"Times New Roman",serif;font-size:26px;color:var(--rose-deep);font-weight:700}.sub{margin-top:6px;font-size:14px;opacity:.75}
-  .countdown{display:flex;justify-content:center;gap:12px;margin:30px 0;z-index:1;position:relative}.count-box{background:var(--rose-deep);color:var(--cream);border-radius:14px;padding:14px 10px;min-width:66px;text-align:center;box-shadow:0 10px 20px -10px rgba(156,58,82,.5)}.num{font-size:26px;font-weight:700;font-family:"Times New Roman",serif;display:block}.lbl{font-size:11px;letter-spacing:1px;opacity:.85}
-  .quote{text-align:center;font-size:17px;line-height:2.1;margin:40px 0;position:relative;z-index:1}.mark{color:var(--rose-mid);font-size:30px;display:block;margin-bottom:6px}.location-btn{display:inline-block;margin-top:16px;padding:12px 28px;background:linear-gradient(135deg,var(--rose-mid),var(--rose-deep));color:var(--cream);text-decoration:none;border-radius:999px;font-size:14px;font-weight:500;letter-spacing:1px;transition:transform .2s}.location-btn:hover{transform:translateY(-2px)}footer{text-align:center;margin-top:50px;font-size:13px;color:var(--rose-mid);letter-spacing:2px;position:relative;z-index:1}@media(max-width:420px){.names{font-size:42px}.corner{width:80px;height:80px}.count-box{min-width:56px;padding:10px 6px}}
-</style></head><body>
-<svg class="corner tl" viewBox="0 0 200 200"><path d="M0,0 Q100,20 60,100 Q140,60 200,0" fill="none" stroke="#c96a82" stroke-width="1.5" opacity=".5"/><circle cx="30" cy="30" r="4" fill="#c96a82" opacity=".4"/><circle cx="70" cy="60" r="3" fill="#b98a4f" opacity=".5"/></svg>
-<svg class="corner br" viewBox="0 0 200 200"><path d="M0,0 Q100,20 60,100 Q140,60 200,0" fill="none" stroke="#c96a82" stroke-width="1.5" opacity=".5"/><circle cx="30" cy="30" r="4" fill="#c96a82" opacity=".4"/><circle cx="70" cy="60" r="3" fill="#b98a4f" opacity=".5"/></svg>
-<div class="container"><div class="hero"><div class="eyebrow">دعوة زفاف</div><div class="names">محمود<span class="amp">&amp;</span>أماني</div><div class="tagline">وجودكم هو أجمل هدية،<br>وننتظر بكل سرور مشاركتكم لنا هذه الليلة المميزة</div></div><div class="divider"><span class="line"></span><span class="dot"></span><span class="line"></span></div>
-<div class="countdown" id="countdown"><div class="count-box"><span class="num" id="days">--</span><span class="lbl">يوم</span></div><div class="count-box"><span class="num" id="hours">--</span><span class="lbl">ساعة</span></div><div class="count-box"><span class="num" id="mins">--</span><span class="lbl">دقيقة</span></div><div class="count-box"><span class="num" id="secs">--</span><span class="lbl">ثانية</span></div></div>
-<div class="card"><div class="label">التاريخ</div><div class="value">الخميس، ٩ يوليو ٢٠٢٦</div><div class="sub">9 / 7 / 2026</div></div><div class="card"><div class="label">المكان</div><div class="value">The Palace</div><div class="sub">نتشرف بحضوركم لمشاركتنا الفرحة</div><a class="location-btn" href="https://www.google.com/maps/search/The+Palace" target="_blank" rel="noopener">عرض الموقع على الخريطة</a></div><div class="quote"><span class="mark">❝</span>ومن آياته أن خلق لكم من أنفسكم أزواجًا لتسكنوا إليها<br>وجعل بينكم مودة ورحمة</div><footer>مع تحيات محمود &amp; أماني</footer></div>
-<script>const weddingDate=new Date('2026-07-09T18:00:00').getTime();function updateCountdown(){const d=weddingDate-Date.now();if(d<0){document.getElementById('countdown').innerHTML='<div class="card"><div class="value">تمت الليلة بإذن الله 🌸</div></div>';return}document.getElementById('days').textContent=Math.floor(d/86400000);document.getElementById('hours').textContent=Math.floor(d%86400000/3600000);document.getElementById('mins').textContent=Math.floor(d%3600000/60000);document.getElementById('secs').textContent=Math.floor(d%60000/1000)}updateCountdown();setInterval(updateCountdown,1000)</script></body></html>
+:root{
+  --rose-deep:#9c3a52;
+  --rose-mid:#c96a82;
+  --rose-soft:#f3d9de;
+  --blush:#fdf3f4;
+  --cream:#fffaf8;
+  --gold:#b98a4f;
+  --ink:#4a2530;
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+
+body{
+  background:linear-gradient(180deg,var(--blush),var(--cream));
+  font-family:Tahoma,Arial,sans-serif;
+  color:var(--ink);
+  overflow-x:hidden;
+}
+
+.container{
+  max-width:560px;
+  margin:0 auto;
+  padding:0 24px 60px;
+  position:relative;
+}
+
+.corner{
+  position:fixed;
+  width:130px;
+  height:130px;
+  opacity:.55;
+  pointer-events:none;
+  z-index:0;
+}
+
+.corner.tl{top:0;right:0}
+.corner.br{bottom:0;left:0;transform:rotate(180deg)}
+
+.hero{
+  position:relative;
+  text-align:center;
+  padding:70px 20px 40px;
+  z-index:1;
+}
+
+.eyebrow{
+  font-size:13px;
+  letter-spacing:4px;
+  color:var(--gold);
+  font-weight:500;
+  margin-bottom:18px;
+  opacity:0;
+  animation:fadeUp 1s ease forwards .2s;
+}
+
+.names{
+  font-family:"Times New Roman",serif;
+  font-size:56px;
+  line-height:1.3;
+  color:var(--rose-deep);
+  font-weight:700;
+  opacity:0;
+  animation:fadeUp 1s ease forwards .5s;
+}
+
+.amp{
+  display:block;
+  font-size:30px;
+  color:var(--gold);
+  margin:6px 0;
+}
+
+.tagline{
+  margin-top:22px;
+  font-size:16px;
+  font-weight:300;
+  line-height:2;
+  opacity:0;
+  animation:fadeUp 1s ease forwards .9s;
+}
+
+@keyframes fadeUp{
+  from{opacity:0;transform:translateY(16px)}
+  to{opacity:1;transform:translateY(0)}
+}
+
+.divider{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:12px;
+  margin:36px 0;
+}
+
+.divider .line{
+  width:60px;
+  height:1px;
+  background:var(--rose-mid);
+}
+
+.divider .dot{
+  width:6px;
+  height:6px;
+  border-radius:50%;
+  background:var(--gold);
+}
+
+.card{
+  background:var(--cream);
+  border:1px solid var(--rose-soft);
+  border-radius:18px;
+  padding:34px 28px;
+  text-align:center;
+  box-shadow:0 20px 40px -20px rgba(156,58,82,.25);
+  position:relative;
+  z-index:1;
+}
+
+.card + .card{margin-top:20px}
+
+.label{
+  font-size:12px;
+  letter-spacing:3px;
+  color:var(--gold);
+  margin-bottom:10px;
+}
+
+.value{
+  font-family:"Times New Roman",serif;
+  font-size:26px;
+  color:var(--rose-deep);
+  font-weight:700;
+}
+
+.sub{
+  margin-top:6px;
+  font-size:14px;
+  opacity:.75;
+}
+
+.countdown{
+  display:flex;
+  justify-content:center;
+  gap:12px;
+  margin:30px 0;
+  z-index:1;
+  position:relative;
+}
+
+.count-box{
+  background:var(--rose-deep);
+  color:var(--cream);
+  border-radius:14px;
+  padding:14px 10px;
+  min-width:66px;
+  text-align:center;
+  box-shadow:0 10px 20px -10px rgba(156,58,82,.5);
+}
+
+.num{
+  font-size:26px;
+  font-weight:700;
+  font-family:"Times New Roman",serif;
+  display:block;
+}
+
+.lbl{
+  font-size:11px;
+  letter-spacing:1px;
+  opacity:.85;
+}
+
+.quote{
+  text-align:center;
+  font-size:17px;
+  line-height:2.1;
+  margin:40px 0;
+  position:relative;
+  z-index:1;
+}
+
+.mark{
+  color:var(--rose-mid);
+  font-size:30px;
+  display:block;
+  margin-bottom:6px;
+}
+
+.location-btn{
+  display:inline-block;
+  margin-top:16px;
+  padding:12px 28px;
+  background:linear-gradient(135deg,var(--rose-mid),var(--rose-deep));
+  color:var(--cream);
+  text-decoration:none;
+  border-radius:999px;
+  font-size:14px;
+  font-weight:500;
+  letter-spacing:1px;
+}
+
+footer{
+  text-align:center;
+  margin-top:50px;
+  font-size:13px;
+  color:var(--rose-mid);
+  letter-spacing:2px;
+  position:relative;
+  z-index:1;
+}
+
+@media(max-width:420px){
+  .names{font-size:42px}
+  .corner{width:80px;height:80px}
+  .count-box{min-width:56px;padding:10px 6px}
+}
+</style>
+</head>
+
+<body>
+
+<svg class="corner tl" viewBox="0 0 200 200">
+  <path d="M0,0 Q100,20 60,100 Q140,60 200,0" fill="none" stroke="#c96a82" stroke-width="1.5" opacity=".5"/>
+  <circle cx="30" cy="30" r="4" fill="#c96a82" opacity=".4"/>
+  <circle cx="70" cy="60" r="3" fill="#b98a4f" opacity=".5"/>
+</svg>
+
+<svg class="corner br" viewBox="0 0 200 200">
+  <path d="M0,0 Q100,20 60,100 Q140,60 200,0" fill="none" stroke="#c96a82" stroke-width="1.5" opacity=".5"/>
+  <circle cx="30" cy="30" r="4" fill="#c96a82" opacity=".4"/>
+  <circle cx="70" cy="60" r="3" fill="#b98a4f" opacity=".5"/>
+</svg>
+
+<div class="container">
+
+  <div class="hero">
+    <div class="eyebrow">دعوة زفاف</div>
+
+    <div class="names">
+      محمود
+      <span class="amp">&amp;</span>
+      أماني
+    </div>
+
+    <div class="tagline">
+      وجودكم هو أجمل هدية،<br>
+      وننتظر بكل سرور مشاركتكم لنا هذه الليلة المميزة
+    </div>
+  </div>
+
+  <div class="divider">
+    <span class="line"></span>
+    <span class="dot"></span>
+    <span class="line"></span>
+  </div>
+
+  <div class="countdown" id="countdown">
+    <div class="count-box"><span class="num" id="days">--</span><span class="lbl">يوم</span></div>
+    <div class="count-box"><span class="num" id="hours">--</span><span class="lbl">ساعة</span></div>
+    <div class="count-box"><span class="num" id="mins">--</span><span class="lbl">دقيقة</span></div>
+    <div class="count-box"><span class="num" id="secs">--</span><span class="lbl">ثانية</span></div>
+  </div>
+
+  <div class="card">
+    <div class="label">التاريخ</div>
+    <div class="value">الخميس، ٩ يوليو ٢٠٢٦</div>
+    <div class="sub">9 / 7 / 2026</div>
+  </div>
+
+  <div class="card">
+    <div class="label">المكان</div>
+    <div class="value">The Palace</div>
+    <div class="sub">نتشرف بحضوركم لمشاركتنا الفرحة</div>
+    <a class="location-btn" href="https://www.google.com/maps/search/The+Palace" target="_blank" rel="noopener">عرض الموقع على الخريطة</a>
+  </div>
+
+  <div class="quote">
+    <span class="mark">❝</span>
+    ومن آياته أن خلق لكم من أنفسكم أزواجًا لتسكنوا إليها<br>
+    وجعل بينكم مودة ورحمة
+  </div>
+
+  <footer>مع تحيات محمود &amp; أماني</footer>
+</div>
+
+<script>
+const weddingDate = new Date('2026-07-09T18:00:00').getTime();
+
+function updateCountdown(){
+  const distance = weddingDate - new Date().getTime();
+
+  if(distance < 0){
+    document.getElementById('countdown').innerHTML =
+      '<div class="card"><div class="value">تمت الليلة بإذن الله 🌸</div></div>';
+    return;
+  }
+
+  document.getElementById('days').textContent = Math.floor(distance / 86400000);
+  document.getElementById('hours').textContent = Math.floor((distance % 86400000) / 3600000);
+  document.getElementById('mins').textContent = Math.floor((distance % 3600000) / 60000);
+  document.getElementById('secs').textContent = Math.floor((distance % 60000) / 1000);
+}
+
+updateCountdown();
+setInterval(updateCountdown,1000);
+</script>
+
+</body>
+</html>
+```
